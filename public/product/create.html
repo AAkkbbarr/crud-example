@@ -1,0 +1,29 @@
+{{ define "PRODUCT_CREAT" }}
+
+{{ template "HEADER" }}
+
+<div class="container p-5 bg-light mb-5 shadow-sm rounded">
+    <form class="" action="/products/store" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" >
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Text</label>
+            <textarea class="form-control" id="text" rows="3" name="text"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price">
+        </div>
+
+        <button type="submit" class="btn btn-outline-secondary">Создать</button>
+        <a href="/products" class="btn btn-outline-secondary">Назад</a>
+    </form>
+</div>
+
+
+{{ template "FOOTER" }}
+
+{{ end }}

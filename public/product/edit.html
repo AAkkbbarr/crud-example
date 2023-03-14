@@ -1,0 +1,28 @@
+{{ define "PRODUCT_EDIT" }}
+
+{{ template "HEADER" }}
+
+<div class="container p-5 bg-light mb-5 shadow-sm rounded">
+    <form class="" action="/products/update?id={{ .ID }}" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{ .Name }}">
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Text</label>
+            <textarea class="form-control" id="text" rows="3" name="text">{{ .Text }}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price" value="{{ .Price }}">
+        </div>
+
+        <button type="submit" class="btn btn-outline-secondary">Изменить</button>
+        <a href="/products" class="btn btn-outline-secondary">Назад</a>
+    </form>
+</div>
+
+{{ template "FOOTER" }}
+
+{{ end }}

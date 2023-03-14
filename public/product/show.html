@@ -1,0 +1,19 @@
+{{ define "PRODUCT_SHOW" }}
+
+{{ template "HEADER" }}
+
+<div class="container d-flex justify-content-end mb-3">
+    <a href="/products" class="btn btn-outline-secondary">Назад</a>
+</div>
+
+<div class="container mb-5">
+    <ul class="list-group">
+        <li class="list-group-item">Name: {{ .Name }}</li>
+        <li class="list-group-item">Text: {{ .Text }} </li>
+        <li class="list-group-item">Price: {{ .Price }}</li>
+    </ul>
+</div>
+
+{{ template "FOOTER" }}
+
+{{ end }}
